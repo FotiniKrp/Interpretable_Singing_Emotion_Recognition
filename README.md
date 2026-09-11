@@ -56,7 +56,7 @@ To reproduce the feature extraction and experiments, download the datasets direc
 
 - **RAVDESS (Singing Subset):** [Zenodo](https://zenodo.org/records/1188976)
 - **GTSinger:** [GitHub repository](https://github.com/AaronZ345/GTSinger)
-- **VocalSet:** Annotations from [Zenodo](https://zenodo.org/records/7061507); audio files from [Zenodo](https://zenodo.org/records/1442513?preview_file=VocalSet1-2.zip)
+- **VocalSet:** Annotations from [Zenodo](https://zenodo.org/records/7061507), audio files from [Zenodo](https://zenodo.org/records/1442513?preview_file=VocalSet1-2.zip)
   
 - **`model_pitch_leaky (1).h5`** - Pre-trained CNN model
   - Architecture: Dual-input architecture with late fusion
