@@ -16,7 +16,7 @@ We propose an interpretable Singing Emotion Recognition (SiER) framework combini
 │   ├── Feature_Definitions.pdf      # Documentation for all extracted features
 │   ├── cmudict.dict                 # CMU Pronouncing Dictionary for phoneme-alignment
 |   ├── mfa_results.zip              # RAVDESS phonetic alignment TextGrid files (MFA output)
-│   └── proposed_framework.png       # Framework architecture overview
+│   └── SiER_pipeline.png            # Framework overview
 └── README.md
 ```
 
