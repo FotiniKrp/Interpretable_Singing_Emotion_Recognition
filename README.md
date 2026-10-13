@@ -42,8 +42,7 @@ Comprehensive analysis, evaluation, and interpretation of results:
 - Feature Selection pipeline (Nested LOSO)
 - SHAP explainability analysis to understand feature importance
 - Confusion matrices and classification reports
-- Visualization of emotion distributions and feature patterns
-- Cross-corpus performance comparison
+- Cross-corpus performance comparisons
 - Grad-cam analysis to validate learned vocal technique features
 
 #### 3. `run_mfa.bash`
@@ -67,13 +66,7 @@ To reproduce the feature extraction and experiments, download the datasets direc
 - **`cmudict.dict`** - CMU Pronouncing Dictionary
   - Contains phonetic transcriptions for 130K+ English words
   - Used for phoneme-alignment
- 
-### **Tools & Libraries:**
-- CREPE for accurate pitch tracking
-- OpenSMILE v2.6 (eGeMAPSv02) for acoustic feature extraction
-- Librosa for audio processing and extracting features.
-- TensorFlow (for the CNN)
-- scikit-learn, SHAP, etc.
+  - Available at: [http://www.speech.cs.cmu.edu/cgi-bin/cmudict](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)
 
 ### Selected Feature Sets (Nested LOSO)
 
@@ -86,7 +79,11 @@ The table below outlines the top selected feature subsets across different datas
 | **Phonetic** | 'articulation_rate', 'std_phoneme_duration' | 'articulation_rate', 'std_phoneme_duration' | 'articulation_rate', 'std_phoneme_duration' |
 | **Vocal Technique** | *None (Excluded by definition)* | 'MFDR_vibrato', 'breathy_mean', 'pharyngeal_max', 'falsetto_max', 'glissando_max', 'tech_entropy' | 'pharyngeal_max', 'mix_max', 'vibrato_peak_factor', 'vibrato_max', 'falsetto_std', 'breathy_std' |
 
-## Acknowledgments & References
-
-- **CMU Pronouncing Dictionary**: Used for phoneme-level alignment preprocessing.  
-  *Carnegie Mellon University Speech Group.* Available at: [http://www.speech.cs.cmu.edu/cgi-bin/cmudict](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)
+### Tools, Libraries & Feature Sets
+- **OpenSMILE Toolkit:** Eyben et al. (2010) — *openSMILE -- The Munich Versatile and Fast Open-Source Audio Feature Extractor* [[Paper](https://doi.org/10.1145/1873951.1874246) | [Website](https://audeering.github.io/opensmile/)]
+- **eGeMAPSv02 Feature Set:** Eyben et al. (2015) — *The Geneva Minimalistic Acoustic Parameter Set (GeMAPS) for Voice Research and Affective Computing* [[Paper](https://doi.org/10.1109/TAFFC.2015.2457417)]
+- **CREPE (Pitch Tracking):** Kim et al. (2018) — *CREPE: A Convolutional Representation for Pitch Estimation* [[Paper](https://arxiv.org/abs/1802.06182)]
+- **Montreal Forced Aligner (MFA):** McAuliffe et al. (2017) [[Paper](https://doi.org/10.21437/Interspeech.2017-1386)]
+- **CMU Pronouncing Dictionary:** Carnegie Mellon University Speech Group [[Resource](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)]
+- **SHAP (Explainability):** Lundberg & Lee (2017) — *A Unified Approach to Interpreting Model Predictions* [[Paper](https://arxiv.org/abs/1705.07874)]
+  
