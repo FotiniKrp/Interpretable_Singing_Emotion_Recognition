@@ -77,8 +77,8 @@ The table below outlines the top selected feature subsets across different datas
 ### Tools, Libraries & Feature Sets
 - **OpenSMILE Toolkit:** Eyben et al. (2010) — *openSMILE -- The Munich Versatile and Fast Open-Source Audio Feature Extractor* [[Paper](https://doi.org/10.1145/1873951.1874246) | [Website](https://audeering.github.io/opensmile/)]
 - **eGeMAPSv02 Feature Set:** Eyben et al. (2015) — *The Geneva Minimalistic Acoustic Parameter Set (GeMAPS) for Voice Research and Affective Computing* [[Paper](https://doi.org/10.1109/TAFFC.2015.2457417)]
-- **CREPE (Pitch Tracking):** Kim et al. (2018) — *CREPE: A Convolutional Representation for Pitch Estimation* [[Paper](https://arxiv.org/abs/1802.06182)]
-- **Montreal Forced Aligner (MFA):** McAuliffe et al. (2017) [[Paper](https://doi.org/10.21437/Interspeech.2017-1386)]
+- **CREPE (Pitch Tracking):** Kim et al. (2018) — *CREPE: A Monophonic Pitch Tracker Based on Deep Learning* [[Paper](https://arxiv.org/abs/1802.06182) | [GitHub](https://github.com/marl/crepe)]
+- **Montreal Forced Aligner (MFA):** McAuliffe et al. (2017) [[Paper](https://www.phonetics.linguistics.northwestern.edu/mcauliffe/mfa_interspeech2017.pdf) | [GitHub](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner)]
 - **CMU Pronouncing Dictionary:** Carnegie Mellon University Speech Group [[Resource](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)]
-- **SHAP (Explainability):** Lundberg & Lee (2017) — *A Unified Approach to Interpreting Model Predictions* [[Paper](https://arxiv.org/abs/1705.07874)]
-  
+- **SHAP (Explainability):** Lundberg & Lee (2017) — *A Unified Approach to Interpreting Model Predictions* [[Paper](https://arxiv.org/abs/1705.07874) | [GitHub](https://github.com/shap/shap)]
+- **Core Processing Libraries:** TensorFlow, scikit-learn, Librosa
