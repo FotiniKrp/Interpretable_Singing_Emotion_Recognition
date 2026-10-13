@@ -63,11 +63,6 @@ To reproduce the feature extraction and experiments, download the datasets direc
   - Purpose: Output presence of vocal techniques (*vibrato, glissando, mix, pharyngeal, falsetto, breathy*)
   - Input: Mel-spectrograms and pitch contours from **~1.5-second audio segments**
 
-- **`cmudict.dict`** - CMU Pronouncing Dictionary
-  - Contains phonetic transcriptions for 130K+ English words
-  - Used for phoneme-alignment
-  - Available at: [http://www.speech.cs.cmu.edu/cgi-bin/cmudict](http://www.speech.cs.cmu.edu/cgi-bin/cmudict)
-
 ### Selected Feature Sets (Nested LOSO)
 
 The table below outlines the top selected feature subsets across different dataset optimizations. For more details of each feature listed, refer to [`supplementary/Feature_Definitions.pdf`](supplementary/Feature_Definitions.pdf).
