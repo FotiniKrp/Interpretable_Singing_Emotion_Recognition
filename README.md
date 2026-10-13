@@ -2,7 +2,7 @@
 
 ## Overview
 
-We propose an interpretable Singing Emotion Recognition (SER) framework combining domain-specific descriptors spanning prosodic, spectral, phonetic, and learned vocal technique features. Using a nested Leave-One-Speaker-Out (LOSO) feature selection strategy paired with SHAP and Grad-CAM analyses, we demonstrate that incorporating explicit singing descriptors (such as vibrato) improves cross-speaker stability and provides acoustically coherent explanations for emotional expression in singing performances.
+We propose an interpretable Singing Emotion Recognition (SiER) framework combining domain-specific descriptors spanning prosodic, spectral, phonetic, and learned vocal technique features. Using a nested Leave-One-Speaker-Out (LOSO) feature selection strategy paired with SHAP and Grad-CAM analyses, we demonstrate that incorporating explicit singing descriptors (such as vibrato) improves cross-speaker stability and provides acoustically coherent explanations for emotional expression in singing performances.
 
 ## Repository Contents
 ```
@@ -13,6 +13,7 @@ We propose an interpretable Singing Emotion Recognition (SER) framework combinin
 ├── models/
 │   └── model_pitch_leaky (1).h5     # Pre-trained Dual-Input CNN for vocal technique extraction
 ├── supplementary/
+│   ├── Feature_Definitions.pdf      # Documentation for all extracted features
 │   ├── cmudict.dict                 # CMU Pronouncing Dictionary for phoneme-alignment
 |   ├── mfa_results.zip              # RAVDESS phonetic alignment TextGrid files (MFA output)
 │   └── proposed_framework.png       # Framework architecture overview
@@ -25,7 +26,7 @@ We propose an interpretable Singing Emotion Recognition (SER) framework combinin
 Comprehensive feature extraction pipeline for singing audio:
 
 **Acoustic Features Extracted:**
-- **Pitch Analysis**: F0 contours, pitch statistics, variability
+- **Pitch Analysis**: pitch statistics, variability
 - **Spectral Features**: Spectral centroid, spectral flatness, HNR, Formant frequencies, Alpha ratio etc.
 - **Loudness & Energy**: energy dynamics, loudness variations, loudness peaks/sec
 - **Vocal Technique Features:**: vocal technique presence
@@ -74,7 +75,10 @@ To reproduce the feature extraction and experiments, download the datasets direc
 - TensorFlow (for the CNN)
 - scikit-learn, SHAP, etc.
 
-### Feature Selection Results
+### Selected Feature Sets (Nested LOSO)
+
+The table below outlines the top selected feature subsets across different dataset optimizations. For more details of each feature listed, refer to [`supplementary/Feature_Definitions.pdf`](supplementary/Feature_Definitions.pdf).
+
 | Category | Speech-Optimized (RAVDESS, 19 feats) | Singing-Optimized (RAVDESS, 18 feats) | Singing-Optimized (GTSinger, 19 feats) |
 | :--- | :--- | :--- | :--- |
 | **Prosodic** | 'loudness_sma3_percentile80.0', 'loudnessPeaksPerSec', 'F0semitoneFrom27.5Hz_sma3nz_stddevNorm', 'F0semitoneFrom27.5Hz_sma3nz_amean', 'F0semitoneFrom27.5Hz_sma3nz_percentile80.0', 'shimmerLocaldB_sma3nz_amean', 'shimmerLocaldB_sma3nz_stddevNorm', 'MeanVoicedSegmentLengthSec' | 'shimmerLocaldB_sma3nz_amean', 'F0semitoneFrom27.5Hz_sma3nz_stddevNorm', 'F0semitoneFrom27.5Hz_sma3nz_percentile80.0', 'loudnessPeaksPerSec', 'melodic_deviation' | 'loudnessPeaksPerSec', 'VoicedSegmentsPerSec', 'F0semitoneFrom27.5Hz_sma3nz_percentile50.0', 'F0semitoneFrom27.5Hz_sma3nz_percentile20.0', 'shimmerLocaldB_sma3nz_amean', 'jitterLocal_sma3nz_amean' |
