@@ -74,20 +74,13 @@ To reproduce the feature extraction and experiments, download the datasets direc
 - TensorFlow (for the CNN)
 - scikit-learn, SHAP, etc.
 
-### **Summary of key findings & Figures**
-
-### 1. Feature Selection Results
+### Feature Selection Results
 | Category | Speech-Optimized (RAVDESS, 19 feats) | Singing-Optimized (RAVDESS, 18 feats) | Singing-Optimized (GTSinger, 19 feats) |
 | :--- | :--- | :--- | :--- |
 | **Prosodic** | 'loudness_sma3_percentile80.0', 'loudnessPeaksPerSec', 'F0semitoneFrom27.5Hz_sma3nz_stddevNorm', 'F0semitoneFrom27.5Hz_sma3nz_amean', 'F0semitoneFrom27.5Hz_sma3nz_percentile80.0', 'shimmerLocaldB_sma3nz_amean', 'shimmerLocaldB_sma3nz_stddevNorm', 'MeanVoicedSegmentLengthSec' | 'shimmerLocaldB_sma3nz_amean', 'F0semitoneFrom27.5Hz_sma3nz_stddevNorm', 'F0semitoneFrom27.5Hz_sma3nz_percentile80.0', 'loudnessPeaksPerSec', 'melodic_deviation' | 'loudnessPeaksPerSec', 'VoicedSegmentsPerSec', 'F0semitoneFrom27.5Hz_sma3nz_percentile50.0', 'F0semitoneFrom27.5Hz_sma3nz_percentile20.0', 'shimmerLocaldB_sma3nz_amean', 'jitterLocal_sma3nz_amean' |
 | **Spectral** | 'HNRdBACF_sma3nz_amean', 'alphaRatioV_sma3nz_stddevNorm', 'F2amplitudeLogRelF0_sma3nz_stddevNorm', 'alphaRatioV_sma3nz_amean', 'spectralFluxUV_sma3nz_amean', 'F1bandwidth_sma3nz_stddevNorm', 'logRelF0-H1-A3_sma3nz_amean', 'slopeV0-500_sma3nz_amean', 'F2frequency_sma3nz_stddevNorm'| 'HNRdBACF_sma3nz_amean', 'F2amplitudeLogRelF0_sma3nz_stddevNorm', 'alphaRatioV_sma3nz_stddevNorm', 'spectralFlux_sma3_amean', 'alphaRatioV_sma3nz_amean' | 'alphaRatioV_sma3nz_stddevNorm', 'slopeV0-500_sma3nz_stddevNorm', 'logRelF0-H1-H2_sma3nz_stddevNorm', 'HNRdBACF_sma3nz_stddevNorm', 'logRelF0-H1-A3_sma3nz_stddevNorm' |
 | **Phonetic** | 'articulation_rate', 'std_phoneme_duration' | 'articulation_rate', 'std_phoneme_duration' | 'articulation_rate', 'std_phoneme_duration' |
 | **Vocal Technique** | *None (Excluded by definition)* | 'MFDR_vibrato', 'breathy_mean', 'pharyngeal_max', 'falsetto_max', 'glissando_max', 'tech_entropy' | 'pharyngeal_max', 'mix_max', 'vibrato_peak_factor', 'vibrato_max', 'falsetto_std', 'breathy_std' |
-
-### 2. Performance Comparison
-
-### 3. VocalSet mappings
-### 4. GTSinger SHAP analysis
 
 ## Acknowledgments & References
 
