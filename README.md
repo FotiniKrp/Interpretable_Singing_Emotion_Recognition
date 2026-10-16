@@ -65,7 +65,7 @@ To reproduce the feature extraction and experiments, download the datasets direc
 
 ### Selected Feature Sets (Nested LOSO)
 
-The table below outlines the top selected feature subsets across different dataset optimizations. For more details of each feature listed, refer to [`supplementary/Feature_Definitions.pdf`](supplementary/Feature_Definitions.pdf).
+The table below outlines the top selected feature subsets across different dataset optimizations. For more details of each feature listed, refer to [`supplementary/Feature_Set.pdf`](supplementary/Feature_Set.pdf).
 
 | Category | Speech-Optimized (RAVDESS, 19 feats) | Singing-Optimized (RAVDESS, 18 feats) | Singing-Optimized (GTSinger, 19 feats) |
 | :--- | :--- | :--- | :--- |
