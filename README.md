@@ -13,7 +13,7 @@ We propose an interpretable Singing Emotion Recognition (SiER) framework combini
 ├── models/
 │   └── model_pitch_leaky (1).h5     # Pre-trained Dual-Input CNN for vocal technique extraction
 ├── supplementary/
-│   ├── Feature_Definitions.pdf      # Documentation for all extracted features
+│   ├── Feature_Set.pdf              # Documentation for extracted feature set
 │   ├── cmudict.dict                 # CMU Pronouncing Dictionary for phoneme-alignment
 |   ├── mfa_results.zip              # RAVDESS phonetic alignment TextGrid files (MFA output)
 │   └── SiER_pipeline.png            # Framework overview
