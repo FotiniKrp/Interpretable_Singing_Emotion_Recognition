@@ -9,7 +9,7 @@ We propose an interpretable Singing Emotion Recognition (SiER) framework combini
 ├── notebooks_&scripts/
 │   ├── Feature_Extraction.ipynb     # Pipeline for preprocessing and feature extraction
 │   ├── run_mfa.bash                 # Automated script for Montreal Forced Aligner (MFA)
-│   └── Results_and_Visuals.ipynb    # Nested LOSO feature selection, SHAP and Grad-CAM explainability, and performance evaluation
+│   └── Result_and_Visuals.ipynb    # Nested LOSO feature selection, SHAP and Grad-CAM explainability, and performance evaluation
 ├── models/
 │   └── model_pitch_leaky (1).h5     # Pre-trained Dual-Input CNN for vocal technique extraction
 ├── supplementary/
@@ -32,8 +32,8 @@ Comprehensive feature extraction pipeline for singing audio:
 - **Vocal Technique Features:**: vocal technique presence
 - **Phonetic Features**: CMU Dictionary-based phoneme analysis, articulation rates, phoneme and pause ratios.
 
-#### 2. `Results_and_Visuals.ipynb`
-Comprehensive analysis, evaluation, and interpretation of results:
+#### 2. `Result_and_Visuals.ipynb`
+Comprehensive analysis, evaluation, and interpretation:
 
 **Content:**
 - Leave-One-Speaker-Out (LOSO) evaluation methodology
