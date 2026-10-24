@@ -67,12 +67,38 @@ To reproduce the feature extraction and experiments, download the datasets direc
 
 The table below outlines the top selected feature subsets across different dataset optimizations. For more details of each feature listed, refer to [`supplementary/Feature_Set.pdf`](supplementary/Feature_Set.pdf).
 
+#### Singing-Optimized Feature Sets
 | Category | Singing-Optimized (RAVDESS, 18 feats) | Singing-Optimized (GTSinger, 19 feats) |
 | :--- | :--- | :--- |
 | **Prosodic** | 'shimmerLocaldB_sma3nz_amean', 'F0semitoneFrom27.5Hz_sma3nz_stddevNorm', 'F0semitoneFrom27.5Hz_sma3nz_percentile80.0', 'loudnessPeaksPerSec', 'melodic_deviation' | 'loudnessPeaksPerSec', 'VoicedSegmentsPerSec', 'F0semitoneFrom27.5Hz_sma3nz_percentile50.0', 'F0semitoneFrom27.5Hz_sma3nz_percentile20.0', 'shimmerLocaldB_sma3nz_amean', 'jitterLocal_sma3nz_amean' |
 | **Spectral** | 'HNRdBACF_sma3nz_amean', 'F3amplitudeLogRelF0_sma3nz_stddevNorm', 'alphaRatioV_sma3nz_stddevNorm', 'spectralFlux_sma3_amean', 'alphaRatioV_sma3nz_amean' | 'alphaRatioV_sma3nz_stddevNorm', 'slopeV0-500_sma3nz_stddevNorm', 'logRelF0-H1-H2_sma3nz_stddevNorm', 'HNRdBACF_sma3nz_stddevNorm', 'logRelF0-H1-A3_sma3nz_stddevNorm' |
 | **Phonetic** | 'articulation_rate', 'std_phoneme_duration' | 'articulation_rate', 'std_phoneme_duration' |
 | **Vocal Technique** | 'MFDR_vibrato', 'breathy_mean', 'pharyngeal_max', 'falsetto_max', 'glissando_max', 'tech_entropy' | 'pharyngeal_max', 'mix_max', 'vibrato_peak_factor', 'vibrato_std', 'falsetto_std', 'breathy_std' |
+
+#### Speech-Optimized Feature Sets
+
+| Speech-Optimized (RAVDESS, 19 feats) | Speech-Optimized (GTSinger, 20 feats) |
+| :--- | :--- |
+| `F0semitoneFrom27.5Hz_sma3nz_amean` | `loudnessPeaksPerSec` |
+| `F0semitoneFrom27.5Hz_sma3nz_percentile20.0` | `MeanVoicedSegmentLengthSec` |
+| `F0semitoneFrom27.5Hz_sma3nz_percentile50.0` | `VoicedSegmentsPerSec` |
+| `F0semitoneFrom27.5Hz_sma3nz_percentile80.0` | `F0semitoneFrom27.5Hz_sma3nz_percentile50.0` |
+| `F0semitoneFrom27.5Hz_sma3nz_stddevNorm` | `F0semitoneFrom27.5Hz_sma3nz_percentile20.0` |
+| `F3amplitudeLogRelF0_sma3nz_stddevNorm` | `F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope` |
+| `HNRdBACF_sma3nz_amean` | `F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2` |
+| `alphaRatioV_sma3nz_amean` | `alphaRatioV_sma3nz_stddevNorm` |
+| `alphaRatioV_sma3nz_stddevNorm` | `slopeV500-1500_sma3nz_stddevNorm` |
+| `loudnessPeaksPerSec` | `logRelF0-H1-A3_sma3nz_stddevNorm` |
+| `loudness_sma3_percentile80.0` | `F1amplitudeLogRelF0_sma3nz_stddevNorm` |
+| `mfcc1V_sma3nz_amean` | `HNRdBACF_sma3nz_stddevNorm` |
+| `mfcc1V_sma3nz_stddevNorm` | `shimmerLocaldB_sma3nz_amean` |
+| `mfcc4V_sma3nz_amean` | `mfcc4V_sma3nz_stddevNorm` |
+| `shimmerLocaldB_sma3nz_amean` | `mfcc2_sma3_stddevNorm` |
+| `slopeV500-1500_sma3nz_stddevNorm` | `mfcc2V_sma3nz_stddevNorm` |
+| `F2amplitudeLogRelF0_sma3nz_amean` | `mfcc1V_sma3nz_stddevNorm` |
+| `F2frequency_sma3nz_stddevNorm` | `mfcc3V_sma3nz_stddevNorm` |
+| `mfcc2V_sma3nz_amean` | `mfcc4_sma3_stddevNorm` |
+|  | `loudness_sma3_meanFallingSlope` |
 
 ### Tools, Libraries & Feature Sets
 - **OpenSMILE Toolkit:** Eyben et al. (2010) — *openSMILE -- The Munich Versatile and Fast Open-Source Audio Feature Extractor* [[Paper](https://doi.org/10.1145/1873951.1874246) | [Website](https://audeering.github.io/opensmile/)]
